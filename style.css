@@ -54,6 +54,7 @@
     position: relative;
     width: 60px;
     height: 60px;
+    /* margin: 0 5px; */
     background: url('/assets/menu-alt-right-regular-24.png');
     background-repeat: no-repeat;
     background-size: 50px;
@@ -200,20 +201,49 @@
 
 
 
-
-
-
-
 @media(max-width: 798px) {
     .showcase, .showcase header {
-        padding: 40px;
+        padding: 25px;
     }
 
     .text h2 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .text h3 {
         font-size: 1.5rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 321px) {
+    .text p {
+        display: none;
+    }
+}
+
+
+@media(max-width: 420px) {
+    .menu {
+        width: 200px;
+    }
+
+    .showcase.active {
+        right: 200px;
+    }
+
+    .showcase {
+        background:linear-gradient(0deg, #15271d5e, #1f473138),  url('/assets/coastalbg.jpg');
+        background-repeat: no-repeat;
+        background-size: 600px;
+        
+        
+    }
+
+    .showcase video {
+        display: none;
     }
 }
