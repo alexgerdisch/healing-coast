@@ -2,6 +2,7 @@
 
 :root {
     --overlay-color: #15271D;
+    --hc-slate-grey: #B8C4C0;
 }
 
 * {
@@ -177,6 +178,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #B8C4C0;
 }
 
 .menu ul {
