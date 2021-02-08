@@ -1,259 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
 :root {
     --overlay-color: #15271D;
     --hc-slate-grey: #B8C4C0;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Jost', sans-serif;
-}
-
 .showcase {
-    position: absolute;
-    right: 0;
-    width: 100%;
-    min-height: 100vh;
-    padding: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #111;
-    color: #fff;
-    z-index: 2;
-    transition: 0.5s;
-}
-
-
-.showcase.active {
-    right: 300px;
-
-}
-
-.showcase header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 40px 100px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    width: 150px;
-    margin-top: -20px;
-    margin-left: -20px;
-}
-
-.toggle {
-    position: relative;
-    margin-top: -20px;
-    margin-left: -20px;
-    width: 60px;
-    height: 60px;
-    /* margin: 0 5px; */
-    background: url('/assets/menu-alt-right-regular-24.png');
-    background-repeat: no-repeat;
-    background-size: 50px;
-    background-position: center;
-    cursor: pointer;
-}
-
-.toggle.active {
-    background: url('/assets/x-regular-24.png');
-    background-repeat: no-repeat;
-    background-size: 45px;
-    background-position: center;
-    cursor: pointer;
-}
-
-.toggle:hover {
-    transform: scale(1.5);
-    transition-duration: 0.5s;
-    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    
-}
-
-.showcase video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--overlay-color);
-    mix-blend-mode: overlay;
-}
-
-.text {
-    position: relative;
-    z-index: 10;
-}
-
-.text h2 {
-    font-size: 5rem;
-    line-height: 1em;
-    text-transform: uppercase;
-}
-
-.text h3 {
-    font-size: 3rem;
-    line-height: 1em;
-    font-weight: 400;
-}
-
-.text p {
-    margin-top: 20px;
-    font-size: 1.1rem;
-    max-width: 700px;
-    color:#fff;
-}
-
-.toggle {
-    filter: invert(100);
-}
-
-.text a {
-    display: inline-block;
-    font-size: 1em;
-    background: #fff;
-    padding: 10px 50px;
-    margin: 50px 0;
-    text-decoration: none;
-    color: #111;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: 0.2s;
-   
-   
-}
-
-.text a:hover {
-   letter-spacing: 6px;
-}
-
-.text p {
-    /* background-color: #15271d50 */
-    color: #FFF;
-    opacity: 1.0;
-}
-
-.social {
-    position: absolute;
-    bottom: 20px;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.social li {
-    list-style: none;
-
-}
-
-.social li a {
-    display: inline-block;
-    filter: invert(1);
-    margin-right: 20px;
-    transform: scale(0.5);
-    transition: 0.5s
-}
-
-.social li a:hover {
-    transform: scale(0.5) translateY(-10px);
-}
-
-
-.menu {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 300px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #B8C4C0;
-}
-
-.menu ul {
-    position: relative;
-    list-style: none;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    font-size: 2rem;
-    color: var(--overlay-color);
-    margin-top: 50px;
-}
-
-.menu ul li a:hover {
-    color: #1F4731;
-}
-
-
-
-
-@media(max-width: 798px) {
-    .showcase, .showcase header {
-        padding: 25px;
-    }
-
-    .text h2 {
-        font-size: 2rem;
-    }
-
-    .text h3 {
-        font-size: 1.5rem;
-    }
-
-    .logo {
-        font-size: 1rem;
-    }
-}
-
-@media(max-width: 321px) {
-    .text p {
-        display: none;
-    }
-}
-
-
-@media(max-width: 420px) {
-    .menu {
-        width: 200px;
-    }
-
-    .showcase.active {
-        right: 200px;
-    }
-
-    .showcase {
-        background:linear-gradient(0deg, #15271d5e, #1f473138),  url('/assets/coastalbg.jpg');
+        background:linear-gradient(0deg, #15271d5e, #1f473138);
         background-repeat: no-repeat;
-        background-size: 600px;
-        
-        
-    }
-
-    .showcase video {
-        display: none;
-    }
 }
+
+.category {
+    height: 50px;
+    width: 100%;
+}
+
+#neck {
+    grid-area: neck;
+    background: rgb(236, 15, 15);
+}
+
+#midback {
+    grid-area: midback;
+    width: 100%;
+    background: blue;
+}
+
+#lowback {
+    grid-area: lowback;
+    width: 100%
+}
+
+#upper-extrem {
+    grid-area: upperExtrem;
+}
+
+#lower-extrem {
+    grid-area: lowerExtrem;
+}
+
+.condition-nav {
+    display: grid;
+    grid-template-areas: 
+                "neck neck"
+                "lowback midback"
+                "upperExtrem LowerExtrem";
+    background-color: var(--hc-slate-grey);
+    width: 100vw;
+}
+
