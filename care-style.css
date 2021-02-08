@@ -4,46 +4,56 @@
 }
 
 .showcase {
-        background:linear-gradient(0deg, #15271d5e, #1f473138);
-        background-repeat: no-repeat;
+    background:linear-gradient(0deg, #15271d5e, #1f473138);
+    background-repeat: no-repeat;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
 }
 
-.category {
-    height: 50px;
-    width: 100%;
-}
-
-#neck {
-    grid-area: neck;
-    background: rgb(236, 15, 15);
-}
-
-#midback {
-    grid-area: midback;
-    width: 100%;
-    background: blue;
-}
-
-#lowback {
-    grid-area: lowback;
-    width: 100%
-}
-
-#upper-extrem {
-    grid-area: upperExtrem;
-}
-
-#lower-extrem {
-    grid-area: lowerExtrem;
+.container {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin: 0;
+    padding: 0;
 }
 
 .condition-nav {
     display: grid;
-    grid-template-areas: 
-                "neck neck"
-                "lowback midback"
-                "upperExtrem LowerExtrem";
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-template-rows: 100px auto;
     background-color: var(--hc-slate-grey);
-    width: 100vw;
+    margin: 0;
+    padding: 0;
+    
 }
+
+.category {
+    height: #444;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#neck {
+
+}
+
+#midback {
+
+}
+
+#lowback {
+
+}
+
+#upper-extrem {
+    
+}
+
+#lower-extrem {
+    
+}
+
+
 
