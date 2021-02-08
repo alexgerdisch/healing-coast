@@ -4,65 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+  
     <title>Healing Coast Chiropractic</title>
 </head>
 <body>
 
-    <section class="showcase">
+    <section class="showcase" id="main-showcase">
         <header>
-            <h2 class="logo">Healing Coast Chiropractic</br>Santa Cruz, CA</h2>
-            <div class="toggle"></div>
+            <img src="/assets/logo-inverse.png" alt="healing coast logo" class="logo">
+            <div class="toggle" id="menu-toggle"></div>
         </header>
-
-        <video src="/assets/bg-vid.mp4" muted loop autoplay></video>
-
+        
         <div class="overlay"></div>
 
         <div class="text">
-            <h2>Seabright Office Has Opened</h2>
+            <h2>Santa Cruz Office Has Opened</h2>
             <h3>Now Accepting New Patients</h3>
-            <p>Healing Coast Chiropractic by Dr. Alexandra Barone is conveniently located on Seabright Avenue just before Murray Street. For more information, use the menu in the top right or book an appointment below.</p>
+            <p>Healing Coast Chiropractic by Dr. Alexandra Barone is located at 543 Seabright Avenue, Santa Cruz CA. For more information, use the menu in the top right or book an appointment below.</p>
             <a href="#">Book Now</a>
         </div>
 
         <ul class="social">
             <li><a href=""><img src="/assets/instagram-alt-logo-24.png" alt="instagram-logo"></a></li>
-            <li><a href=""><img src="/assets/facebook-circle-logo-24.png" alt="facebook-logo"></a></li>
         </ul>
 
     </section>
 
+
+    <!-- Pop Out Menu -->
     <div class="menu">
         <ul>
             <li><a href="#">Book Now</a></li>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Care</a></li>
+            <li><a href="/care.html">Care</a></li>
             <li><a href="#">Doctors</a></li>
             <li><a href="#">Resources</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </div>
 
-
-    <script>
-        const menuToggle = document.querySelector('.toggle');
-        const showcase = document.querySelector('.showcase');
-
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            showcase.classList.toggle('active');
-
-        });
-
-        while (showcase.classList.contains('active')) {
-            showcase.addEventListener('click', () => {
-                showcase.classList.remove('active');
-            });
-        }
-
-
-
-
-    </script>    
+    
+    <script src="script.js"></script>
 </body>
 </html>
